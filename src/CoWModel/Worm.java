@@ -47,7 +47,7 @@ public class Worm {
      *  Returns a random direction.
      *  @return a direction
      **/
-    public static Direction randomDirection() {
+    private static Direction randomDirection() {
         int pick = new Random().nextInt(Direction.values().length);
         Debug.debug(pick);
         return Direction.values()[pick];
@@ -62,6 +62,34 @@ public class Worm {
      */
     public ArrayList grow() {
         return null;
+    }
+    
+    /**
+     * 
+     */
+    public ArrayList shrink() {
+        return null;
+    }
+    
+    /**
+     * 
+     */
+    public ArrayList move() {
+        return null;
+    }
+    
+    /**
+     * 
+     */
+    private boolean deleteTail() {
+        return true;
+    }
+    
+    /**
+     * 
+     */
+    private boolean moveHead() {
+        return true;
     }
     
 }

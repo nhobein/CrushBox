@@ -3,7 +3,8 @@
  */
 package CoWModel;
 
-import Utilities.Utilities.Direction;;
+import Utilities.Utilities.Direction;
+import Utilities.Utilities.ItemType;
 
 /**
  * The head of the worm.
@@ -13,7 +14,11 @@ import Utilities.Utilities.Direction;;
  */
 public class WormHead extends Item {
 
-    /** the field holding the steering value */
+    public WormHead(ItemType mytype) {
+		super(mytype);
+	}
+
+	/** the field holding the steering value */
     private Direction direction;
     
     /**
@@ -37,8 +42,8 @@ public class WormHead extends Item {
      * 
      * @return the direction of the wormhead
      */
-    public String getDir() {
-        return direction.name();
+    public Direction getDir() {
+        return direction;
     }
 
 }

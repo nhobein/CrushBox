@@ -3,6 +3,8 @@
  */
 package CoWModel;
 
+import Utilities.Utilities.ItemType;
+
 /**
  * Superclass for all items in the game.
  *
@@ -10,14 +12,17 @@ package CoWModel;
  * @author Nina Schulte-Hobein
  */
 public class Item {
-    /** an enumeration containing itemtypes */
-    private enum ItemType { FOOD, WALL, WORM };
+
     /** the type of the item */
     private ItemType type;
 
     /** the position of the item in the playing field */
     private int xPos = -1;
     private int yPos = -1;
+    
+    public Item(ItemType mytype) {
+    	type = mytype;
+    }
 
     /** A Setter for the itemposition.
      *
@@ -38,7 +43,14 @@ public class Item {
         int[] Pos = {xPos, yPos};
         return Pos;
     }
+    
+    public int getXPos() {
+    	return xPos;
+    }
 
+    public int getYPos() {
+    	return yPos;
+    }
     /** 
      * A Setter for the itemtype.
      * 

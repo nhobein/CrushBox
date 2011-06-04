@@ -8,4 +8,9 @@ public class Debug {
             System.out.println(message);
         }
     }
+   public static void debug(int value) {
+            if (DEBUGENABLED) {
+                System.out.println(value);
+            }
+    }
 }

@@ -3,6 +3,8 @@
  */
 package CoWModel;
 
+import Utilities.Utilities.Direction;;
+
 /**
  * The head of the worm.
  *
@@ -10,9 +12,7 @@ package CoWModel;
  * @author Nina Schulte-Hobein
  */
 public class WormHead extends Item {
-    /** an enumeration containing steering commands */
-    public enum Direction {UP, DOWN, LEFT, RIGHT};
-   
+
     /** the field holding the steering value */
     private Direction direction;
     
@@ -21,9 +21,10 @@ public class WormHead extends Item {
      * 
      * @param turnTo the direction of the Wormhead
      */
-    public void setDir(String turnTo) {
+    public void setDir(Direction dir) {
         try {
-            direction = Direction.valueOf(turnTo);
+            direction = dir;
+            //direction = Direction.valueOf(turnTo);
         } catch (IllegalArgumentException e) {
             Utilities.Debug.debug("No correct Itemtype" + e.getMessage());
         } catch (NullPointerException e) {
